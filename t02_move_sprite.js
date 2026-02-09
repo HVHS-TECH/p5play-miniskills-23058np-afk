@@ -7,10 +7,16 @@
 /*******************************************************/
 // setup()
 /*******************************************************/
+rectangleVelocity = 1
+
 function setup() {
+	
 	cnv = new Canvas(windowWidth, windowHeight);
-	rectangleSprite = new Sprite(windowWidth/2, windowHeight/2, 100, 160);
+	rectangleSprite = new Sprite(windowWidth/2, 0, 100, 160);
 	rectangleSprite.color = 'red';
+	rectangleSprite.rotationSpeed = -5;
+	rectangleSprite.vel.y = rectangleVelocity;
+	
 
 	console.log("setup: ");
 }
@@ -19,7 +25,7 @@ function setup() {
 // draw()
 /*******************************************************/
 function draw() {
-	backgroun("light grey")
+	background("light grey");
 }
 
 /*******************************************************/
