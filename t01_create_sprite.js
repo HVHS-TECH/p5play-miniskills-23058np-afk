@@ -8,6 +8,8 @@
 // setup()
 /*******************************************************/
 function setup() {
+	cnv = new Canvas(windowWidth, windowHeight);
+	rectangleSprite = new Sprite(0, 0, 100, 160);
 	console.log("setup: ");
 
 }
