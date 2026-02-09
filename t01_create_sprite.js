@@ -10,6 +10,7 @@
 function setup() {
 	cnv = new Canvas(windowWidth, windowHeight);
 	rectangleSprite = new Sprite(0, 0, 100, 160);
+	rectangleSprite.color = 'red';
 	console.log("setup: ");
 
 }
