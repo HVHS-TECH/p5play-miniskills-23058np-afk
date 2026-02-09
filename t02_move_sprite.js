@@ -18,7 +18,7 @@ function setup() {
 	rectangleSprite.vel.y = rectangleVelocity;
 	
 
-	console.log("setup: ");
+	console.log("setup: now falls!");
 }
 	
 /*******************************************************/
