@@ -8,15 +8,18 @@
 // setup()
 /*******************************************************/
 function setup() {
-	console.log("setup: ");
+	cnv = new Canvas(windowWidth, windowHeight);
+	rectangleSprite = new Sprite(windowWidth/2, windowHeight/2, 100, 160);
+	rectangleSprite.color = 'red';
 
+	console.log("setup: ");
 }
 	
 /*******************************************************/
 // draw()
 /*******************************************************/
 function draw() {
-	
+	backgroun("light grey")
 }
 
 /*******************************************************/

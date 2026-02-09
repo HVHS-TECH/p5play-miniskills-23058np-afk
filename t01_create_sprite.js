@@ -9,9 +9,12 @@
 /*******************************************************/
 function setup() {
 	cnv = new Canvas(windowWidth, windowHeight);
-	rectangleSprite = new Sprite(0, 0, 100, 160);
+	rectangleSprite = new Sprite(windowWidth/2, windowHeight/2, 100, 160);
 	rectangleSprite.color = 'red';
-	console.log("setup: ");
+
+	circleSprite = new Sprite(windowWidth/2, windowHeight/1.9, 80);
+	circleSprite.color = 'blue';
+	console.log("setup: red rectangle, blue circle.	");
 
 }
 	
@@ -19,7 +22,7 @@ function setup() {
 // draw()
 /*******************************************************/
 function draw() {
-	
+	background('light grey'); 
 }
 
 /*******************************************************/
