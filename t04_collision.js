@@ -12,17 +12,17 @@ function setup() {
 	cnv = new Canvas(windowWidth, windowHeight);
 	world.gravity.y = 10;
 	try {
-		mySprite = new Sprite(windowWidth/2, 0, 80, 120, 's'); 
+		mySprite = new Sprite(windowWidth/2, 0, 80, 120, 'd'); 
 		mySprite.color = 'RGB(31, 112, 256)';
 		mySprite.rotationSpeed = 2;
 		mySprite.vel.x = 2;
 		mySprite.drag = 2
 		
 		//platform_1
-		platform_1 = new Sprite(400, 200, 100, 10, 'd');
+		platform_1 = new Sprite(400, 200, 100, 10, 'k');
 		platform_1.rotation = 25
 		platform_1.bounciness = 1.5
-		platform_1.vel.x=2
+		//platform_1.vel.x=2
 		
 
 		//platform_2
