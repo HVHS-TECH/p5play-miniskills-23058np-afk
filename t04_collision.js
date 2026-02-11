@@ -7,6 +7,7 @@
 /*******************************************************/
 // setup()
 /*******************************************************/
+//it works when you open the debug console!!!
 function setup() {
 	
 	cnv = new Canvas(windowWidth, windowHeight);
