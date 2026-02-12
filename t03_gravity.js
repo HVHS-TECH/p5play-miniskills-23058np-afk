@@ -31,7 +31,7 @@ function setup() {
 		circleSprite.vel.x = 6;
 
 		console.log(windowHeight);
-		console.log("red goes up, green goes right, blue goes left, and they are all pulled down. exept green. and blue. blue figured out the meaning to life.");
+		console.log("red goes up, green goes right, blue goes left, and they are all pulled down.");
 	} catch (error) {
 		console.log("something is wrong")
 	}
