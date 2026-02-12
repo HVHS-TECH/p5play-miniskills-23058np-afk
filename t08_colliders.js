@@ -8,7 +8,7 @@
 // setup()
 /*******************************************************/
 function setup() {
-
+	world.gravity.y = 30
 	cnvPadding = 12 //to remove scroll bars
 	cnv = new Canvas(windowWidth-cnvPadding, windowHeight-cnvPadding); // use windowWidth so window can be resized
 	// width = whatever x is for Canvas()
@@ -28,8 +28,8 @@ function setup() {
 		wallTop.color = "green"
 		//ball one
 		ballOne = new Sprite(width/2, height/2, 50, 'd');
-		ballOne.color = 'cyan';
-		ballOne.vel.x = 10;
+		ballOne.colour = 'cyan';
+		ballOne.vel.x = random(100,-100);
 		ballOne.vel.y = 20;
 		ballOne.bounciness = 1;
 		ballOne.friction = 0;
@@ -38,7 +38,7 @@ function setup() {
 		alienGroup = new Group();
 		//aliens fucntion
 		function makeAliens() {
-			alien = new Sprite(random(0,width), random(0,height),30,30, 'd'); // random() can only be used after func setup( is called)
+			alien = new Sprite(random(0,width), random(0,height),random(15,30),random(5,30), 'd'); // random() can only be used after func setup( is called)
 			const VELARRAY = [-1, 1];
 			randNum = random(1, 15) * random(VELARRAY);
 			alien.vel.x = randNum;
@@ -47,13 +47,16 @@ function setup() {
 			alien.friction = 0;
 			alienGroup.add(alien);
 		}
-		for (i = 0; i < 11; i++) {
+		for (i = 0; i < 200; i++) {
 			makeAliens();
 		} 
-		// alien ball collision
+		// alien ball collision + giving the ball velocity + flipping gravity
 		alienGroup.collides(ballOne, func2Call);
 		function func2Call(_ssss, ballOne) {
 			// Delete the alien which was hit
+			ballOne.vel.x = ballOne.vel.x +random(100,-100);
+			world.gravity.y = world.gravity.y*-random(1,1);
+			console.log(world.gravity.y);
 			_ssss.remove();
 		}
 		//if everything works this should appear
