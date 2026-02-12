@@ -26,7 +26,7 @@ function setup() {
 		//bottom wall
 		wallTop = new Sprite(width/2,height-4, width, 8,'k');
 		wallTop.color = "green"
-		//ball one
+		//ball onesadsa
 		ballOne = new Sprite(width/2, height/2, 50, 'd');
 		ballOne.color = 'cyan';
 		ballOne.vel.x = 10;
