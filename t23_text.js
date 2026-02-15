@@ -1,5 +1,5 @@
 /*******************************************************/
-// P5.play: t22_keyboard
+// P5.play: t23_text
 // Move sprite via keyboard
 // Written by ???
 /*******************************************************/
@@ -26,6 +26,10 @@ function setup() {
 /*******************************************************/
 function draw() {
 	background("grey");
+    text("Hello World", 50, 50) 
+    var name = "Mr Bob";
+    text("Hello "+name, 50, 100);
+    //movement
 	right = Math.min(kb.pressing('right'),1);
 	left = Math.min(kb.pressing('left'),1);
 	up = Math.min(kb.pressing('up'),1);
