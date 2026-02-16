@@ -15,6 +15,8 @@ function setup() {
 	try {
 		ballOne = new Sprite(width/2, height/2, 50, 'd');
 		ballOne.drag = 10
+		ballOne.color = 'pink';
+		ballOne.stroke = 'red';		
 		console.log("setup: success ");
 	} catch (error) {
 		console.log("setup: fail ");

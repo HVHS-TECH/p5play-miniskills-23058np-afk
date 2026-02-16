@@ -8,7 +8,10 @@
 // setup()
 /*******************************************************/
 function setup() {
-
+        textSize(128);
+        fill(255);
+        stroke(100);
+        strokeWeight(4);
         textAlign(CENTER, CENTER);
         world.gravity.y = 0
         cnvPadding = 12 
@@ -16,6 +19,8 @@ function setup() {
         try {
                 ballOne = new Sprite(width/2, height/2, 50, 'd');
                 ballOne.drag = 10
+                ballOne.color = 'pink';
+		ballOne.stroke = 'red';	
                 console.log("setup: success ");
         } catch (error) {
                 console.log("setup: fail ");
@@ -27,9 +32,6 @@ function setup() {
 function draw() {
         background("grey");
         textSize(128);
-        stroke(0);
-        strokeWeight(2);
-        fill('limegreen');
         //movement
         right = Math.min(kb.pressing('right'),1);
         left = Math.min(kb.pressing('left'),1);
