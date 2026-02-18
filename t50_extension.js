@@ -3,50 +3,35 @@
 // Extension tasks
 // Written by ??
 /*******************************************************/
-function preload(){
-	bgImg = loadImage('../assets/images/sea.jpg');
-	boatImg = loadImage('../assets/images/boat.png');
-}
-function setup() {
-	cnvPadding = 12 
-	cnv = new Canvas(windowWidth-cnvPadding, windowHeight-cnvPadding, "pixelated x4");
-	boatImg.resize(100, 60);
 
+function setup() {
+	stroke(4)
+    strokeWeight(4);
+	cnvPadding = 12 
+	world.gravity.y = 10
+	cnv = new Canvas(400, windowHeight-cnvPadding,)
 	try {
-		boat = new Sprite(width/2,height/2,100,60);
-		boat.image = (boatImg);
-		
-		boat.drag = 20
+		ball = new Sprite(width/2, height/2, 25,'d')
+		ball.color = "pink"
+		ball.stroke = "red"
 		console.log("setup: success ");
 	} catch (error) {
-
 		console.log("setup: fail ");
 
 	}
-
 }
 
-	
-/*******************************************************/
-// draw()
-/*******************************************************/
-function draw() {
-	background(bgImg)
-	textSize(32)
-	text(`x: ${mouseX} y:${mouseY}`,50, 50,);
-	right = Math.min(kb.pressing('right'),1);
-	left = Math.min(kb.pressing('left'),1);
-	up = Math.min(kb.pressing('up'),1);
-	down = Math.min(kb.pressing('down'),1);
-	//gives boat velocity based of the result of both movement keys being pressed
-	boat.vel.y += down - up;
-	boat.vel.x += right - left;
-	//faces right
-	if (kb.pressing('right')){
-		boat.scale.x = -1
+function draw(){
+	background("purple")
+	if (ball.y>height) {
+		ball.vel.y=-100
 	}
-		if (kb.pressing('left')){
-		boat.scale.x = 1
+	console.log(ball.vel.y)
+}
+function keyPressed() {
+	if (keyCode === UP_ARROW) {
+		ball.vel.y = 0
+		ball.vel.y -=5;
+		console.log("UP UP UP")
 	}
-	
 }
